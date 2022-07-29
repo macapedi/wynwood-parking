@@ -3,10 +3,13 @@ import './App.css';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import Map from "./pages/MapPage/MapPage";
+import { useState } from 'react';
 import Header from "./components/Header/Header";
 import ResponsiveAppBar from './components/Header/Header';
 
 function App() {
+
+  
   return (
     <div className="App">
       <BrowserRouter>
