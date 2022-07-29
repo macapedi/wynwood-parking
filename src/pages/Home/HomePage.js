@@ -1,9 +1,11 @@
 import './HomePage.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Modal from '../../components/Modal/Modal';
-
+import { useHistory } from "react-router-dom";
 
 function HomePage() {
+  let history = useHistory();
+
   const [coords, setCoords] = useState({});
   const [isOpen, setIsOpen] = useState(false);
   const [autocomplete, setAutocomplete] = useState(null);
@@ -18,7 +20,18 @@ function HomePage() {
     const lng = autocomplete.getPlace().geometry.location.lng();
 
     setCoords({ lat, lng });
+    if(lat && lng){
+      history.push({
+        pathname: `/map`,
+        search: `?lat=${lat}&lng=${lng}`
+      });
+    }
   };
+
+  
+  // useEffect(() => {
+  //   console.log("haaaa");
+  // });
 
 
   return (
