@@ -1,8 +1,8 @@
 
 import InfoSections from '../../components/InfoSections/InfoSections';
 import './HomePage.scss';
-import Button from '@mui/material/Button'
-import geolocation from "../../assets/logos/geolocation.png"
+import Cards from "../../components/Cards/Cards";
+
 
 
 

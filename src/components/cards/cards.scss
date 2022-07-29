@@ -1,0 +1,9 @@
+.cards{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+
+.card-image{
+    max-width: 10rem;
+}
