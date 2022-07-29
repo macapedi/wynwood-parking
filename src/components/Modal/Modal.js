@@ -21,15 +21,22 @@ const Modal = ({isOpen, closer, onPlaceChanged, onLoad})=> {
             isOpen ?
             (
                 <> 
-                    <button onClick={closer}>close</button>
-                    <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
-                        <div className={classes.search}>
-                            <div className={classes.searchIcon}>
-                                <SearchIcon />
+                    <div className="modalOverlay">
+                        {/* <div className="modal__close" onClick={closer}> */}
+                        <button onClick={closer}>close</button>
+                        <h1 className="page-header">
+                                {`Find Free Parking`}
+                        </h1>
+                        <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
+                            <div className={classes.search}>
+                                <div className={classes.searchIcon}>
+                                    <SearchIcon />
+                                </div>
+                                <InputBase placeholder="Search…" classes={{ root: classes.inputRoot, input: classes.inputInput }} />
                             </div>
-                            <InputBase placeholder="Search…" classes={{ root: classes.inputRoot, input: classes.inputInput }} />
-                        </div>
-                    </Autocomplete>
+                        </Autocomplete>
+                        {/* </div> */}
+                    </div>
                 </>
             ):(null)
         }
