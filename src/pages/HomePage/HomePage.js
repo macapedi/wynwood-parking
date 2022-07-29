@@ -20,6 +20,7 @@ function HomePage() {
       <section className='home__align'>
         <InfoSections />
       </section>
+      <Cards/>
     </div>
   );
 }
