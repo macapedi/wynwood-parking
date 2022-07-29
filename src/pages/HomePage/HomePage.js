@@ -2,12 +2,13 @@
 import InfoSections from '../../components/InfoSections/InfoSections';
 import './HomePage.scss';
 import Cards from "../../components/Cards/Cards";
-import testimony from "../../assets/images/testimony.png";
-
+import customer from "../../assets/images/customer.png";
+import appstore from "../../assets/images/appstore.png";
 
 import { useState, useEffect } from 'react';
 import Modal from '../../components/Modal/Modal';
 import { useHistory } from "react-router-dom";
+import Footer from '../../components/Footer/Footer';
 
 
 function HomePage() {
@@ -50,8 +51,14 @@ function HomePage() {
       <Cards/>
       <Modal isOpen={isOpen} closer={()=>setIsOpen(false)} onPlaceChanged={onPlaceChanged} onLoad={onLoad}/>
       <section className='testimony'>
-        <img src={testimony} className="testimony__image"></img>
+        <img src={customer} className="testimony__image"></img>
+        <p>“WynPark is an asset for local commuters and visitors of our unique Wynwood community”</p>
       </section>
+      <section className='another-section'>
+        <h2>There's more to search on the app</h2>
+        <img src={appstore} className="appstore"></img>
+      </section>
+      <Footer/>
     </div>
   );
 }

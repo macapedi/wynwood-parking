@@ -1,0 +1,20 @@
+.footer{
+    text-align: right;
+    background-color: rgba(48, 0, 156, 1);
+    color: white;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.logos{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: flex-end;
+    padding: 1rem;
+    padding-right: 0;
+}
+
+.logo{
+    width: 25px;
+}
