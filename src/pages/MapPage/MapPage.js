@@ -1,10 +1,7 @@
 
-import './App.css';
-import { BrowserRouter, Route, Switch } from "react-dom";
-import Home from "./pages/Home";
-import
+import './MapPage.css';
 
-function App() {
+function MapPage() {
   return (
     <div className="App">
       <BrowserRouter>
@@ -18,4 +15,4 @@ function App() {
   );
 }
 
-export default App;
+export default MapPage;
