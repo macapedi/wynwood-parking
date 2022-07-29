@@ -13,6 +13,7 @@ function App() {
         <ResponsiveAppBar />
         <Switch>
           <Route path="/" exact component={HomePage} />
+          <Route path="/home" component={HomePage} />
           <Route path="/map" component={Map} />
         </Switch>
       </BrowserRouter>
