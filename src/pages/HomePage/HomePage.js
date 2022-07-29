@@ -1,18 +1,25 @@
 
 import InfoSections from '../../components/InfoSections/InfoSections';
 import './HomePage.scss';
+import Button from '@mui/material/Button'
+import geolocation from "../../assets/logos/geolocation.png"
+
 
 
 
 function HomePage() {
   return (
     <div className="home">
-        <div className='home-main'>
-          <p className='home__title'>This is my home page</p>
-          <InfoSections/>
-
-        </div>
-     
+      <section className='home-main'>
+        <h1 className='home__title'>Find Free Parking</h1>
+        <input placeholder="Enter an address" className='search-bar'></input>
+        <button className='button-search'>
+          Find Free Parking
+        </button>
+      </section>
+      <section className='home__align'>
+        <InfoSections />
+      </section>
     </div>
   );
 }
