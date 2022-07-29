@@ -9,7 +9,9 @@ function HomePage() {
     <div className="home">
         <div className='home-main'>
           <p className='home__title'>This is my home page</p>
+          <div className='home__align'>
           <InfoSections/>
+          </div>
 
         </div>
      
