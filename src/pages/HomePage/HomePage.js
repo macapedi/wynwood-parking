@@ -5,7 +5,10 @@ import './HomePage.scss';
 
 function HomePage() {
   return (
-    <div className="App">
+    <div className="home">
+        <div className='home-main'>
+
+        </div>
      
     </div>
   );
