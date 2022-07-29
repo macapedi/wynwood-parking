@@ -50,3 +50,12 @@
     padding: 1rem;
     border-radius: 4px;
 }
+
+.testimony{
+    background-color: rgba(170, 221, 247, 1);
+
+    &__image{
+        width: 60%;
+        padding: 2rem;
+    }
+}

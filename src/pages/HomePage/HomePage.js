@@ -2,6 +2,7 @@
 import InfoSections from '../../components/InfoSections/InfoSections';
 import './HomePage.scss';
 import Cards from "../../components/Cards/Cards";
+import testimony from "../../assets/images/testimony.png";
 
 
 import { useState, useEffect } from 'react';
@@ -48,6 +49,9 @@ function HomePage() {
       </section>
       <Cards/>
       <Modal isOpen={isOpen} closer={()=>setIsOpen(false)} onPlaceChanged={onPlaceChanged} onLoad={onLoad}/>
+      <section className='testimony'>
+        <img src={testimony} className="testimony__image"></img>
+      </section>
     </div>
   );
 }
