@@ -1,5 +1,5 @@
 
-import './MapPage.css';
+import './HomePage.scss';
 
 
 
