@@ -7,6 +7,8 @@ import axios from 'axios';
 import AddressCard from '../../components/AddressCard/AddressCard';
 
 
+const APIURL = "https://bstn-cris-industry-api.herokuapp.com/location";
+
 const center = {
   lat: 25.799904,
   lng: -80.199119
@@ -24,6 +26,12 @@ const MapPage= () => {
   
   const searchParams = new URLSearchParams(window.location.search);
     
+  const [spaces, setSpaces] = useState([]);
+
+  useEffect(()=>{
+    axios(APIURL).then(spaces=>{console.log(spaces); setSpaces(spaces.data);})
+  }, []);
+
   useEffect(() => {
     async function geoCode(lat, lng){
       let resp;
@@ -84,7 +92,15 @@ const MapPage= () => {
           console.log(child);
           setChildClicked(child);}}
         >
-          {data.map((place,i)=>{
+          {/* {data.map((place,i)=>{
+            //console.log(place);
+            return <div className='marker' 
+            lat={place.latitude}
+            lng={place.longitude}
+            key={i}
+            />
+          })} */}
+          {spaces.map((place,i)=>{
             //console.log(place);
             return <div className='marker' 
             lat={place.latitude}
