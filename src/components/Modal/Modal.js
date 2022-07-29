@@ -33,7 +33,7 @@ const Modal = ({isOpen, closer, onPlaceChanged, onLoad})=> {
                                 <div className={classes.searchIcon}>
                                     
                                 </div>
-                                <InputBase placeholder="Search…" classes={{ root: classes.inputRoot, input: classes.inputInput }} />
+                                <InputBase placeholder="Search…" classes={{ root: classes.inputRoot, input: classes.inputInput }} className="input"/>
                             </div>
                         </Autocomplete>
                         {/* </div> */}
