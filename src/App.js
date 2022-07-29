@@ -1,10 +1,13 @@
 
 import './App.css';
-import { BrowserRouter, Route, Switch } from "react-dom";
-import Home from "./pages/Home";
-import
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Home from "./pages/Home/HomePage";
+import Map from "./pages/MapPage/MapPage";
+import { useState } from 'react';
 
 function App() {
+
+  
   return (
     <div className="App">
       <BrowserRouter>
