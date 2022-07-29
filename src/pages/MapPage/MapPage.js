@@ -67,7 +67,7 @@ const MapPage= () => {
       }
     };
 
-    geoCode(data[childClicked].latitude,data[childClicked].longitude);
+    geoCode(spaces[childClicked].latitude,spaces[childClicked].longitude);
   }
   ,[childClicked]);
 
@@ -114,7 +114,7 @@ const MapPage= () => {
       {/* <div>{childClicked ? (()=>{geoCode(data[childClicked].latitude,data[childClicked].longitude)}):("nothing selected")}</div> */}
       {/* <div>{geoCodedAddress ? (geoCodedAddress.data.results[0].formatted_address):("nothing!")}</div> */}
       <div>{geoCodedAddress ? 
-      (<AddressCard coords={{lat:data[childClicked].latitude, lng: data[childClicked].longitude}} title={geoCodedAddress.data.results[0].formatted_address}/>)
+      (<AddressCard coords={{lat:spaces[childClicked].latitude, lng: spaces[childClicked].longitude}} title={geoCodedAddress.data.results[0].formatted_address}/>)
       :
       ("")}</div>
       
